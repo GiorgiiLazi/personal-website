@@ -1,6 +1,7 @@
 <template>
-  <Header></Header>
-  <Greet></Greet>
+  <Header />
+  <Greet />
+  <Header />
 </template>
 
 <script>
