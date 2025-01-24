@@ -1,14 +1,17 @@
 <template>
   <Header></Header>
+  <Greet></Greet>
 </template>
 
 <script>
+import Greet from './components/Greet.vue';
 import Header from './components/Header.vue';
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    Greet
   }
 }
 </script>

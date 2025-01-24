@@ -14,6 +14,7 @@
             <button class="contact" name="contact">
                 <span class="arrow material-symbols-outlined"> arrow_downward</span>
                 <span>Contact Me</span>
+                <span class="backdrop">Email: malazi140@gmail.com</span>
             </button>
         </Transition>
         
@@ -77,6 +78,7 @@ export default {
     color: grey;
 }
 .contact{
+    position: relative;
     cursor: pointer;
     border: 3px solid #130e07;
     display: flex;
@@ -85,10 +87,22 @@ export default {
     max-width: max-content;
     background: none;
     color: #130e07;
-    transform: rotateX(0px);
-    transition: 1s;
+    
     border-radius: 4px;
 
+}
+.backdrop{
+    text-align: start;
+    width: 600px;
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    color: black;
+    animation: wobble 1s ease-in;
+}
+.contact:hover .backdrop{
+    display: block;
 }
 .arrow {
   display: inline-block;
@@ -104,6 +118,16 @@ export default {
 }
 
 /* animations */
+
+@keyframes wobble{
+    0%{ opacity: 0; transform: translateX(600px) }
+    50%{ opacity: 1; transform: translateX(-10px) }
+    60%{ transform: translateX(10px) }
+    70%{ transform: translateX(-4px) }
+    80%{ transform: translateX(4px) }
+    90%{ transform: translateX(-2px) }
+    100%{ transform: translateX(0) }
+}
 .img-enter-from{
     opacity: 0;
     
