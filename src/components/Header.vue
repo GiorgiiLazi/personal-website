@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <section class="container">
     <Transition class="image" name="img" appear>
         <img src="../assets/photo1.png" alt="my-phote">
     </Transition>
@@ -23,11 +23,11 @@
         
         
     </div>
-  </div>
+</section>
 </template>
 
 <script setup>
-import { ref} from 'vue';
+import { ref } from 'vue';
 
 const showBackdrop = ref(false)
 
@@ -67,6 +67,7 @@ const showContact = () =>{
     object-fit: cover; 
 }
 .title{
+    word-wrap: wrap;
     margin-left: 20px;
     color: #130e07;
     text-align: left;
@@ -78,11 +79,12 @@ const showContact = () =>{
     width: 100%;
 }
 .name{
- 
+    
   font-size: 6em;
 }
 .position{
-    font-size: 2em;
+    text-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.8);
+    font-size: 3em;
     width: 100%;
     color: grey;
 }
