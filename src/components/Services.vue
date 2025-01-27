@@ -3,7 +3,7 @@
     <h1 class="title">My services</h1>
     <div class="card" id="1" >
         <span class="material-symbols-outlined icon">architecture</span>
-        <h1>Web Development on Vue.js</h1>
+        <h1>Web Development Vue.js</h1>
         <h3>Service description:</h3>
         <p>Building dynamic single-page applications (SPA) using Vue.js and Pinia</p>
         <h3>Task Examples:</h3>
@@ -16,7 +16,7 @@
     </div>
     <div class="card" id="2" >
         <span class="material-symbols-outlined icon">draw</span>
-        <h1>WordPress Development </h1>
+        <h1>WordPress Development</h1>
         <h3>Service description:</h3>
         <p>Using CSS, JS, and Bootstrap to customize WordPress sites</p>
         <h3>Task Examples:</h3>
@@ -28,7 +28,7 @@
     </div>
     <div class="card" id="3" >
         <span class="material-symbols-outlined icon">domain_verification</span>
-        <h1>Development of adaptive landings and websites</h1>
+        <h1>Landings</h1>
         <h3>Service description:</h3>
         <p>Creating responsive websites using HTML, CSS, Bootstrap, and JavaScript</p>
         <h3>Task Examples:</h3>
@@ -40,7 +40,7 @@
     </div>
     <div class="card" id="4" >
         <span class="material-symbols-outlined icon">design_services</span>
-        <h1>UI/UX components development</h1>
+        <h1>UI/UX Design</h1>
         <h3>Service description:</h3>
         <p>Creating user interfaces on Vue.js using components</p>
         <h3>Task Examples:</h3>
@@ -52,7 +52,7 @@
     </div>
     <div class="card" id="5" >
         <span class="material-symbols-outlined icon">subheader</span>
-        <h1>SPA development</h1>
+        <h1>SPA building</h1>
         <h3>Service description:</h3>
         <p>Developing SPAs to minimize page reloads and improve user experience.</p>
         <h3>Task Examples:</h3>
@@ -127,21 +127,22 @@ onUpdated(() => {
     grid-row: 1;
 }
 .card{
+    text-align: center;
     position: relative;
     opacity: 0;
     transform: translateX(-100%);
     filter: blur(5px);
     display: inline-grid;
-    padding: 20px;
     border-radius: 30px;
-    width: 500px;
+    width: 400px;
     height: min-content;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
     cursor: pointer;
     background-color: rgb(243, 168, 66);
     word-wrap: wrap;
     z-index:1;
-    transition: 1s all ease-in
+    transition: 0.3s all ease-in;
+    transition-delay: 100ms;
 }
 .card:nth-child(2){
     transition-delay: 200ms;
@@ -156,7 +157,7 @@ onUpdated(() => {
     transition-delay: 800ms;
 }
 .card:nth-child(6){
-    transition-delay: 1000ms;
+    transition-delay: 850ms;
 }
 .show{
     opacity: 1;
@@ -168,6 +169,11 @@ onUpdated(() => {
     animation: all 1s ease-in;
     box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.6);
 
+}
+.card h3{
+    width: 100%;
+    background: black;
+    color: white;
 }
 
 #card1{
@@ -208,6 +214,12 @@ onUpdated(() => {
     border-radius: 0% 50% 0 50%;
     z-index: 3;
 }
-
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+    padding: 15px;
+}
 
 </style>
