@@ -11,10 +11,13 @@
             <h3 class="position" name="position">WordPress Developer / Web Developer </h3>
         </Transition>
         <Transition name="fade-2" appear>
-            <button class="contact" name="contact">
+            <button class="contact" @mouseover="showContact" @mouseleave="showBackdrop = false" name="contact">
                 <span class="arrow material-symbols-outlined"> arrow_downward</span>
                 <span>Contact Me</span>
-                <span class="backdrop">Email: malazi140@gmail.com</span>
+                <Transition name="backdrop">
+                    <span v-if="showBackdrop"  class="backdrop">malazi140@gmail.com</span>
+                </Transition>
+                
             </button>
         </Transition>
         
@@ -23,13 +26,19 @@
   </div>
 </template>
 
-<script>
-export default {
+<script setup>
+import { ref} from 'vue';
 
+const showBackdrop = ref(false)
+
+const showContact = () =>{
+    showBackdrop.value = true
 }
+
 </script>
 
 <style scoped>
+
 .container{
     
     width: 100vw;
@@ -80,64 +89,76 @@ export default {
 .contact{
     position: relative;
     cursor: pointer;
-    border: 3px solid #130e07;
+    border: 1px solid #4160ff;
     display: flex;
     align-items: center;
     font-size: 1.2em;
     max-width: max-content;
-    background: none;
-    color: #130e07;
-    
+    background:#4160ff;
+    color: white;
     border-radius: 4px;
-
+}
+.contact:hover{
+    background: #002aff;
 }
 .backdrop{
     text-align: start;
     width: 600px;
-    display: none;
     position: absolute;
     top: 50px;
     left: 0px;
     color: black;
-    animation: wobble 1s ease-in;
-}
-.contact:hover .backdrop{
-    display: block;
 }
 .arrow {
   display: inline-block;
-  animation: bounce 0.7s ease-in-out infinite; /* Infinite animation */
+  animation: bounce 0.7s ease-in infinite;
 }
 
-.contact:hover{
-    background: #130e07;
-    color: white
-}
-.contact:focus{
-    transform: rotateX(50px)
-}
+
 
 /* animations */
 
-@keyframes wobble{
-    0%{ opacity: 0; transform: translateX(600px) }
+/* @keyframes wobble {
+    0%{ opacity: 0; transform: translateX(600px); filter: blur(5px) }
     50%{ opacity: 1; transform: translateX(-10px) }
     60%{ transform: translateX(10px) }
     70%{ transform: translateX(-4px) }
     80%{ transform: translateX(4px) }
     90%{ transform: translateX(-2px) }
-    100%{ transform: translateX(0) }
+    100%{ transform: translateX(0); filter: blur(0) }
+} */
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px); 
+  }
 }
+
+.backdrop-enter-from, .backdrop-leave-to{
+    opacity: 0; 
+    transform: translateX(600px); 
+    filter: blur(5px)
+    
+}
+.backdrop-enter-active, .backdrop-leave-active{
+    transition: all 1s ease-in;
+}
+.backdrop-enter-to, .backdrop-leave-from{
+    transform: translateX(0); filter: blur(0) 
+    
+}
+
 .img-enter-from{
     opacity: 0;
-    
 }
 .img-enter-active{
     transition: all 1s ease-in;
 }
-.fimgenter-to{
-    opacity: 1;
-    
+.img-enter-to{
+    opacity: 1;  
 }
 
 .fade-enter-from{
@@ -184,14 +205,7 @@ export default {
 }
 
 
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0); /* Start and end at the original position */
-  }
-  50% {
-    transform: translateY(10px); /* Move down by 10px */
-  }
-}
+
 /* dynamic styles */
 @media (max-width: 1200px) {
     .name {

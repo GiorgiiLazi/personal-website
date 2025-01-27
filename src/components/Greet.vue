@@ -1,8 +1,8 @@
 <template>
   <section class="container">
       <article>
-        <h1>Lets solve your problem</h1>
-        <p>And figure how to make you enterprize more profitable</p>
+        <h1>Let's solve your problem</h1>
+        <p>And figure out how to make you enterprize more profitable</p>
     </article>
       <div class="image-holder">
         <img src="../assets/coffee.png" alt="">
@@ -47,7 +47,7 @@ article{
   word-wrap: wrap;
   animation: appear-left linear;
   animation-timeline: view();
-  animation-range: entry 0;
+  animation-range: entry 0 50%;
 }
 article > *{
   margin-left: 20px;
@@ -80,5 +80,18 @@ article p{
     opacity: 1;
     transform: translate(0)
   }
+}
+/* dynamic styles */
+@media (max-width: 780px){
+    .container{
+        flex-direction: column;
+    }
+    .image-holder{
+        display: none;
+    }
+    articel{
+        width: 100%;
+        word-wrap: break-word;
+    }
 }
 </style>
