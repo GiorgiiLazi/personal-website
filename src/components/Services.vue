@@ -103,6 +103,10 @@ onUpdated(() => {
 <style scoped>
 
 .container{
+    background-image: url('@/assets/webdev.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     height:fit-content;
     width: 100vw;
     position: relative;
@@ -119,6 +123,10 @@ onUpdated(() => {
     margin: 10px;
 }
 .title{
+    color: rgb(243, 168, 66);
+    background:rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 4px;
     text-align: center;
     font-size: 4em;
     grid-column: 1/-1;

@@ -22,16 +22,16 @@
     </aside>
     <article class="about">
         <h1>Experience</h1>
-        <p>Web developer with 3 years of commercial experience.</p>
+        <p>Web developer with 2 years of commercial experience.</p>
         <p>Experience working with algorithms and their practical application </p>
         <p>I actively use AI solutions in developing web applications using ChatGPT, Deepseek, Canva, Tabnine.</p>
         <p>First I became interested in programming in 2021. Since then I've build dozens of applications for satisfied customers</p>
         <p>I worked as a freelancer on Fiverr, Upwork, YouDo, Profi</p>
         <div class="para">
-            <h2>I offer you:</h2>
+            <h1>I offer you:</h1>
         <ol>
                 <li>Technical skills and knowledge of Vue.js and JavaScript for complex application architecture.</li>
-                <li>Experience with WordPress for creating custom solutions.</li>
+                <li>Сreating custom solutions in WordPress</li>
                 <li>Delivery on time, effectively managing mine and client's time</li>
         </ol>
         </div>
@@ -97,5 +97,9 @@ export default {
         padding: 20px;
         font-family: Inter;
         border-radius: 20px;
+    }
+    .para h1{
+        font-family: "Bebas Neue", serif;
+        word-spacing: 0.1em;
     }
 </style>
