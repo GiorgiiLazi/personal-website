@@ -24,10 +24,11 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #b8b8f3;
   
 }
 .image-holder {
-    width: 100%;
+    width: 100vw;
     height: 100vh; 
     display: flex; 
     justify-content: center; 
@@ -89,7 +90,13 @@ article p{
     .image-holder{
         display: none;
     }
-    articel{
+    .article{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .article > *{
+        margin: 0;
         width: 100%;
         word-wrap: break-word;
     }

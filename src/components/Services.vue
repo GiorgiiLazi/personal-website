@@ -5,7 +5,7 @@
         <span class="material-symbols-outlined icon">architecture</span>
         <h1>Web Development Vue.js</h1>
         <h3>Service description:</h3>
-        <p>Building dynamic single-page applications (SPA) using Vue.js and Pinia</p>
+        <p>Building dynamic web apps with Vue.js</p>
         <h3>Task Examples:</h3>
         <ul>
             <li>Developing user interfaces</li>
@@ -18,7 +18,7 @@
         <span class="material-symbols-outlined icon">draw</span>
         <h1>WordPress Development</h1>
         <h3>Service description:</h3>
-        <p>Using CSS, JS, and Bootstrap to customize WordPress sites</p>
+        <p>Customizing WordPress templates for you needs</p>
         <h3>Task Examples:</h3>
         <ul>
             <li>Refinement or creation of unique themes</li>
@@ -30,7 +30,7 @@
         <span class="material-symbols-outlined icon">domain_verification</span>
         <h1>Landings</h1>
         <h3>Service description:</h3>
-        <p>Creating responsive websites using HTML, CSS, Bootstrap, and JavaScript</p>
+        <p>Creating responsive websites for marketing, advertising purposes</p>
         <h3>Task Examples:</h3>
         <ul>
             <li>Developing landing pages for products, services, or events</li>
@@ -42,23 +42,23 @@
         <span class="material-symbols-outlined icon">design_services</span>
         <h1>UI/UX Design</h1>
         <h3>Service description:</h3>
-        <p>Creating user interfaces on Vue.js using components</p>
+        <p>Creating user-friendly and visually appealing interfaces</p>
         <h3>Task Examples:</h3>
         <ul>
             <li>Development of interactive forms, modal windows, tables</li>
             <li>Creation of custom reusable widgets</li>
-            <li>Adding animations and improving the visual appeal of the site.</li>
+            <li>Adding animations and improving the visual appeal of the site</li>
         </ul>
     </div>
     <div class="card" id="5" >
         <span class="material-symbols-outlined icon">subheader</span>
         <h1>SPA building</h1>
         <h3>Service description:</h3>
-        <p>Developing SPAs to minimize page reloads and improve user experience.</p>
+        <p>Developing SPAs to minimize page reloads and improve user experience</p>
         <h3>Task Examples:</h3>
         <ul>
             <li>Switching between pages won't reload your page</li>
-            <li>Creation of client parts for complex applications.</li>
+            <li>Creation of client parts for complex applications</li>
             <li>Router optimization, 404 page, custom pages</li>
         </ul>
     </div>
@@ -66,7 +66,7 @@
         <span class="material-symbols-outlined icon">responsive_layout</span>
         <h1>Animations and interactive design</h1>
         <h3>Service description:</h3>
-        <p>Adding animations and interactive elements using CSS and JavaScript.</p>
+        <p>Adding animations and interactive elements</p>
         <h3>Task Examples:</h3>
         <ul>
             <li>Scroll animation</li>
@@ -81,19 +81,15 @@
 import {ref, onMounted, onUpdated} from 'vue'
 import {useCustomAnimations} from './composables/customAnimations'
 let cards = ref([])
-let body = ref()
 const { exportedCards, observer } = useCustomAnimations()
+
 onMounted(()=>{
     cards.value = document.querySelectorAll('.card')
-    body.value = document.body
-    console.log(cards.value)
-
     cards.value.forEach(card => {
     observer.observe(card);
   });
 })
 onUpdated(() => {
-  // Update cards whenever exportedCards are updated
   cards.value = exportedCards.value;
   cards.value.forEach(card => {
     observer.observe(card);  // Re-observe if cards are updated
@@ -107,6 +103,8 @@ onUpdated(() => {
 <style scoped>
 
 .container{
+    height:fit-content;
+    width: 100vw;
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -141,7 +139,7 @@ onUpdated(() => {
     background-color: rgb(243, 168, 66);
     word-wrap: wrap;
     z-index:1;
-    transition: 0.3s all ease-in;
+    transition: 0.3s all ease-out;
     transition-delay: 100ms;
 }
 .card:nth-child(2){
@@ -166,7 +164,7 @@ onUpdated(() => {
 }
 
 .card:hover{
-    animation: all 1s ease-in;
+    animation: all 0.3s ease-in;
     box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.6);
 
 }
@@ -220,6 +218,21 @@ ul{
     list-style: none;
     text-align: left;
     padding: 15px;
+}
+/* dynamic styles */
+
+@media (max-width: 780px){
+    .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+    flex-direction: column;
+    }
+    .container:not(:first-child) {
+    flex: 1 1 300px; /* Grow, shrink, and start at 300px width */
+    max-width: 100%;
+    }
 }
 
 </style>

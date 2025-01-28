@@ -2,9 +2,11 @@
   <Header />
   <Greet />
   <Services />
+  <Experience />
 </template>
 
 <script>
+import Experience from './components/Experience.vue';
 import Greet from './components/Greet.vue';
 import Header from './components/Header.vue';
 import Services from './components/Services.vue';
@@ -14,7 +16,8 @@ export default {
   components: {
     Header,
     Greet,
-    Services
+    Services,
+    Experience
   }
 }
 </script>

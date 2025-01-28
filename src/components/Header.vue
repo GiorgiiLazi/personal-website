@@ -11,11 +11,45 @@
             <h3 class="position" name="position">WordPress Developer / Web Developer </h3>
         </Transition>
         <Transition name="fade-2" appear>
-            <button class="contact" @mouseover="showContact" @mouseleave="showBackdrop = false" name="contact">
+            <button class="contact" @click="toggleShowContact" name="contact">
                 <span class="arrow material-symbols-outlined"> arrow_downward</span>
                 <span>Contact Me</span>
                 <Transition name="backdrop">
-                    <span v-if="showBackdrop"  class="backdrop">malazi140@gmail.com</span>
+                    <span v-if="showBackdrop"  class="backdrop">
+                        <div class="socials">
+                            <span>
+                                <a href="https://wa.me/+995555504380">
+                                    <img width="48" height="48" src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="whatsapp--v1"/>
+                                </a>
+                            </span>
+                            <span>
+                                
+                                <a href="https://t.me/LaziGio">
+                                    <img width="48" height="48" src="https://img.icons8.com/color/48/telegram-app--v1.png" alt="telegram-app--v1"/>
+                                </a>
+                            </span>
+                            <span>
+                                <a href="mailto:malazi140@gmail.com">
+                                    <img width="48" height="48" src="https://img.icons8.com/fluency/48/gmail-new.png" alt="gmail-new"/>
+                                </a>
+                            </span>
+                            <span>
+                                <a href="https://github.com/GiorgiiLazi">
+                                    <img width="48" height="48" src="https://img.icons8.com/fluency/48/github.png" alt="github"/>
+                                </a>
+                            </span>
+                            <span>
+                                <a href="https://www.linkedin.com/in/giolaz/">
+                                    <img width="48" height="48" src="https://img.icons8.com/fluency/48/linkedin.png" alt="linkedin"/>
+                                </a>
+                            </span>
+                            
+                            
+                            
+                            
+                            
+                        </div>
+                </span>
                 </Transition>
                 
             </button>
@@ -31,8 +65,13 @@ import { ref } from 'vue';
 
 const showBackdrop = ref(false)
 
-const showContact = () =>{
-    showBackdrop.value = true
+const toggleShowContact = () =>{
+    if(showBackdrop.value === false){
+        showBackdrop.value = true
+    } else {
+        showBackdrop.value = false
+    }
+   
 }
 
 </script>
@@ -110,14 +149,26 @@ const showContact = () =>{
     top: 50px;
     left: 0px;
     color: black;
+    z-index: 20;
 }
 .arrow {
   display: inline-block;
   animation: bounce 0.7s ease-in infinite;
 }
+.socials{
+    position: relative;
+}
+.socials span img{
 
-
-
+    width: 48px;
+    height: 48px;
+    z-index:0;
+}
+.socials span a{
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
 /* animations */
 
 /* @keyframes wobble {
