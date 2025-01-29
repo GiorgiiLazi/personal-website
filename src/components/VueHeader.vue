@@ -9,7 +9,7 @@
       </Transition>
       <Transition name="fade-1" appear>
         <h3 class="position" name="position">
-          WordPress Developer / Web Developer
+          WordPress Developer / WebDeveloper
         </h3>
       </Transition>
       <Transition name="fade-2" appear>
