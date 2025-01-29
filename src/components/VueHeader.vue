@@ -158,8 +158,11 @@ const toggleShowContact = () => {
 }
 .backdrop {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
