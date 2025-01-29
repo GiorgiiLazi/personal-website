@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="services-container">
     <h1 class="title">My services</h1>
     <div class="card" id="1" >
         <span class="material-symbols-outlined icon">architecture</span>
@@ -79,9 +79,9 @@
 
 <script setup>
 import {ref, onMounted, onUpdated} from 'vue'
-import {useCustomAnimations} from './composables/customAnimations'
+import {useObserver} from './composables/Observer'
 let cards = ref([])
-const { exportedCards, observer } = useCustomAnimations()
+const { exportedCards, observer } = useObserver()
 
 onMounted(()=>{
     cards.value = document.querySelectorAll('.card')
@@ -102,13 +102,14 @@ onUpdated(() => {
 
 <style scoped>
 
-.container{
+.services-container{
     background-image: url('@/assets/webdev.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    height:fit-content;
-    width: 100vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -119,12 +120,12 @@ onUpdated(() => {
     align-items: center;
     justify-items: center;
 }
-.container > * {
+.services-container > * {
     margin: 10px;
 }
 .title{
     color: rgb(243, 168, 66);
-    background:rgba(0, 0, 0, 0.4);
+    background:rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 4px;
     text-align: center;
@@ -140,7 +141,8 @@ onUpdated(() => {
     filter: blur(5px);
     display: inline-grid;
     border-radius: 30px;
-    width: 400px;
+    min-width: 350px;
+    max-width: 500px;
     height: min-content;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
     cursor: pointer;
@@ -174,6 +176,7 @@ onUpdated(() => {
 .card:hover{
     animation: all 0.3s ease-in;
     box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.6);
+    background-color:rgb(255, 149, 0)
 
 }
 .card h3{
@@ -230,14 +233,14 @@ ul{
 /* dynamic styles */
 
 @media (max-width: 780px){
-    .container {
+    .services-container {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
     padding: 16px;
     flex-direction: column;
     }
-    .container:not(:first-child) {
+    .card {
     flex: 1 1 300px; /* Grow, shrink, and start at 300px width */
     max-width: 100%;
     }

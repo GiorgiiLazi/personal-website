@@ -1,23 +1,30 @@
 <template>
-  <Header />
+  <VueHeader />
   <Greet />
   <Services />
   <Experience />
+  <Portfolio />
+  <VueFooter />
 </template>
 
 <script>
 import Experience from './components/Experience.vue';
+import VueFooter from './components/VueFooter.vue';
 import Greet from './components/Greet.vue';
-import Header from './components/Header.vue';
+import VueHeader from './components/VueHeader.vue';
+import Portfolio from './components/Portfolio.vue';
 import Services from './components/Services.vue';
+
 
 export default {
   name: 'App',
   components: {
-    Header,
+    VueHeader,
     Greet,
     Services,
-    Experience
+    Experience,
+    Portfolio,
+    VueFooter
   }
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="greet-container">
     <article>
       <h1>Let's solve your problem</h1>
       <p>And figure out how to make you enterprize more profitable</p>
@@ -15,7 +15,7 @@ export default {};
 </script>
 
 <style scoped>
-.container {
+.greet-container {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -80,7 +80,7 @@ article p {
 }
 /* dynamic styles */
 @media (max-width: 780px) {
-  .container {
+  .greet-container {
     flex-direction: column;
   }
   .image-holder {
