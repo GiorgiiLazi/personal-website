@@ -84,10 +84,11 @@ const toggleShowContact = () => {
 <style scoped>
 .header-container {
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 100px;
 }
 .header-container * {
   width: 50%;
@@ -140,6 +141,7 @@ const toggleShowContact = () => {
   background: #4160ff;
   color: white;
   border-radius: 4px;
+  margin-bottom: 20px;
 }
 .contact:hover {
   background: #002aff;
