@@ -64,7 +64,7 @@
     </div>
     <div class="card" id="6">
         <span class="material-symbols-outlined icon">responsive_layout</span>
-        <h1>Animations and interactive design</h1>
+        <h1>Animations</h1>
         <h3>Service description:</h3>
         <p>Adding animations and interactive elements</p>
         <h3>Task Examples:</h3>
@@ -149,8 +149,7 @@ onUpdated(() => {
     background-color: rgb(243, 168, 66);
     word-wrap: wrap;
     z-index:1;
-    transition: 0.3s all ease-out;
-    transition-delay: 100ms;
+    transition: 0.5s all ease-out;
 }
 .card:nth-child(2){
     transition-delay: 200ms;
@@ -178,6 +177,9 @@ onUpdated(() => {
     box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.6);
     background-color:rgb(255, 149, 0)
 
+}
+.card h1{
+    word-wrap: break-word;
 }
 .card h3{
     width: 100%;

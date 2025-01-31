@@ -13,12 +13,12 @@
             </div>
             <h1>{{ card.name }}</h1>
             <div class="desc">
-            <button class="link">
-                <a :href="card.projURL">WebSite</a>
-            </button>
-            <button class="repo">
-                <a :href="card.repoURL">Repo</a>
-            </button>
+                <a class="link" :href="card.projURL">
+                    <button >WebSite</button>
+                </a>
+                <a class="repo" :href="card.repoURL"> 
+                    <button >Repo</button>
+                </a>
             </div>
             
         </li>
@@ -105,10 +105,16 @@ const projectCards = reactive([
     gap: 20px;
     list-style: none;
     
+    
 }
 .box li{
     border-radius: 20px;
-    background-color: #BBBB
+    background-color: rgb(241, 154, 32);
+
+}
+.box li:hover{
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+    background-color: rgb(255, 150, 3);
 }
 .box img{
     max-width: 100%;
@@ -120,20 +126,38 @@ const projectCards = reactive([
 }
 .desc{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    flex: 1;
+    
 
 }
-.desc button{
+.desc a{
+    display: flex;
+    align-content: center;
     margin-bottom: 15px;
     border: none;
     background: #6363ff;
     padding: 10px 15px;
-    border-radius: 2px;
-}
-.desc button a{
+    max-width: 100%;
+    text-align: center;
     text-decoration: none;
-    color: white
+    
+}
+.desc a button{
+    text-decoration: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    max-width: 100%;
+    object-fit: cover;
+}
+.desc a:hover{
+    background: #0000ea;
 }
 @media (min-width: 768px) {
   .box {
