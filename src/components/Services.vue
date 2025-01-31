@@ -1,85 +1,99 @@
 <template>
   <section class="services-container">
     <h1 class="title">My services</h1>
-    <div class="card" id="1" >
-        <span class="material-symbols-outlined icon">architecture</span>
-        <h1>Web Development Vue.js</h1>
+    <div 
+    class="card"  
+    v-for="card in cardsContent" 
+    :key="card.id" 
+    :id="card.id" >
+        <span class="material-symbols-outlined icon">{{ card.icon }}</span>
+        <h1>{{ card.titleH1 }}</h1>
         <h3>Service description:</h3>
-        <p>Building dynamic web apps with Vue.js</p>
+        <p>{{ card.desc }}</p>
         <h3>Task Examples:</h3>
         <ul>
-            <li>Developing user interfaces</li>
-            <li>Creating complex logic for Web Application</li>
-            <li>Creating admin panels, dashboards, and interactive elements</li>
+            <li>{{ card.examples[0] }}</li>
+            <li>{{ card.examples[1] }}</li>
+            <li>{{ card.examples[2] }}</li>
         </ul>
 
     </div>
-    <div class="card" id="2" >
-        <span class="material-symbols-outlined icon">draw</span>
-        <h1>WordPress Development</h1>
-        <h3>Service description:</h3>
-        <p>Customizing WordPress templates for you needs</p>
-        <h3>Task Examples:</h3>
-        <ul>
-            <li>Refinement or creation of unique themes</li>
-            <li>Adding interactive elements to the site</li>
-            <li>Optimizing the user interface</li>
-        </ul>
-    </div>
-    <div class="card" id="3" >
-        <span class="material-symbols-outlined icon">domain_verification</span>
-        <h1>Landings</h1>
-        <h3>Service description:</h3>
-        <p>Creating responsive websites for marketing, advertising purposes</p>
-        <h3>Task Examples:</h3>
-        <ul>
-            <li>Developing landing pages for products, services, or events</li>
-            <li>Creating multi-page websites for businesses</li>
-            <li>Adaptation of websites for mobile devices</li>
-        </ul>
-    </div>
-    <div class="card" id="4" >
-        <span class="material-symbols-outlined icon">design_services</span>
-        <h1>UI/UX Design</h1>
-        <h3>Service description:</h3>
-        <p>Creating user-friendly and visually appealing interfaces</p>
-        <h3>Task Examples:</h3>
-        <ul>
-            <li>Development of interactive forms, modal windows, tables</li>
-            <li>Creation of custom reusable widgets</li>
-            <li>Adding animations and improving the visual appeal of the site</li>
-        </ul>
-    </div>
-    <div class="card" id="5" >
-        <span class="material-symbols-outlined icon">subheader</span>
-        <h1>SPA building</h1>
-        <h3>Service description:</h3>
-        <p>Developing SPAs to minimize page reloads and improve user experience</p>
-        <h3>Task Examples:</h3>
-        <ul>
-            <li>Switching between pages won't reload your page</li>
-            <li>Creation of client parts for complex applications</li>
-            <li>Router optimization, 404 page, custom pages</li>
-        </ul>
-    </div>
-    <div class="card" id="6">
-        <span class="material-symbols-outlined icon">responsive_layout</span>
-        <h1>Animations</h1>
-        <h3>Service description:</h3>
-        <p>Adding animations and interactive elements</p>
-        <h3>Task Examples:</h3>
-        <ul>
-            <li>Scroll animation</li>
-            <li>Hover effects, transitions, and loading screens</li>
-            <li>Adding interactive graphs or charts</li>
-        </ul>
-    </div>
+    
   </section>
 </template>
 
 <script setup>
-import {ref, onMounted, onUpdated} from 'vue'
+import {ref, reactive, onMounted, onUpdated} from 'vue'
 import {useObserver} from './composables/Observer'
+
+let cardsContent = reactive([
+    {
+        titleH1: 'Web Development Vue.js',
+        desc: 'Building dynamic web apps with Vue.js',
+        examples: [
+            'Developing user interfaces', 
+            'Creating complex logic for Web Application', 
+            "Creating admin panels, dashboards, and interactive elements"
+        ],
+        icon:'architecture',
+        id: 1
+    },
+    {
+        titleH1: 'WordPress Development',
+        desc: 'Customizing WordPress templates for you needs',
+        examples: [
+            'Refinement or creation of unique themes', 
+            'Adding interactive elements to the site', 
+            "Optimizing the user interface"
+        ],
+        icon:'draw',
+        id: 2
+    },
+    {
+        titleH1: 'Landings',
+        desc: 'Creating responsive websites for marketing, advertising purposes',
+        examples: [
+            'Developing landing pages for products, services, or events', 
+            'Creating multi-page websites for businesses', 
+            "Adaptation of websites for mobile devices"
+        ],
+        icon:'domain_verification',
+        id: 3
+    },
+    {
+        titleH1: 'UI/UX Design',
+        desc: 'Creating user-friendly and visually appealing interfacess',
+        examples: [
+            'Development of interactive forms, modal windows, tables', 
+            'Creation of custom reusable widgets', 
+            "Adding animations and improving the visual appeal of the site"
+        ],
+        icon:'design_services',
+        id: 4
+    },
+    {
+        titleH1: 'SPA building',
+        desc: 'Developing SPAs to minimize page reloads and improve user experience',
+        examples: [
+            'Switching between pages wont reload your page', 
+            'Creation of client parts for complex applications', 
+            "Router optimization, 404 page, custom pages"
+        ],
+        icon:'subheader',
+        id: 5,
+    },
+    {
+        titleH1: 'Animations',
+        desc: 'Adding animations and interactive elements',
+        examples: [
+            'Scroll animations', 
+            'Hover effects, transitions, and loading screens', 
+            "Adding interactive graphs or charts"
+        ],
+        icon:'responsive_layout',
+        id: 6
+    },
+])
 let cards = ref([])
 const { exportedCards, observer } = useObserver()
 
@@ -99,6 +113,7 @@ onUpdated(() => {
 
 
 </script>
+
 
 <style scoped>
 
