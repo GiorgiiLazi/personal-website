@@ -1,7 +1,7 @@
 <template>
   <section class="header-container">
     <Transition class="image" name="img" appear>
-      <img src="../assets/photo1.png" loading="lazy" alt="my-phote" />
+      <img fetchpriority="'high'" src="../assets/photo1.png" alt="my-photo" />
     </Transition>
     <div class="title">
       <Transition name="fade" appear>
@@ -9,7 +9,7 @@
       </Transition>
       <Transition name="fade-1" appear>
         <h3 class="position" name="position">
-          WordPress Developer / WebDeveloper
+          Vue.js Developer / WebDeveloper
         </h3>
       </Transition>
      
@@ -25,7 +25,7 @@
 .header-container {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: max-content;
   display: flex;
   justify-content: center;
   align-items: center;

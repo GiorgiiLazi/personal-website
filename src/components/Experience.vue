@@ -31,7 +31,7 @@
             <h1>I offer you:</h1>
         <ol>
                 <li>✅ Expertise in <strong>Vue.js & JavaScript </strong>– Crafting complex and high-performance web applications.</li>
-                <li>✅ Custom <strong>WordPress</strong> Solutions – Tailored themes, plugins, and functionality to fit your unique needs.</li>
+                <!-- <li>✅ Custom <strong>WordPress</strong> Solutions – Tailored themes, plugins, and functionality to fit your unique needs.</li> -->
                 <li>✅ <strong>On-Time Delivery </strong>– Effective time management to ensure smooth project execution and timely results.</li>
         </ol>
     </div>

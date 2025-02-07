@@ -7,8 +7,13 @@
         :key="card.name" 
         class="card">
             <div class="img-holder">
-                <a :href="card.projURL">
-                    <img :src="card.imgSrc" :alt="card.name">
+                <a 
+                :href='card.projURL'>
+                    <img class="img"
+                     fetchpriority="low" 
+                     decoding="async" 
+                     :src="card.imgSrc" 
+                     :alt="card.name">
                 </a>
             </div>
             <h1>{{ card.name }}</h1>
@@ -35,51 +40,61 @@ const projectCards = reactive([
         name: 'Burger Place',
         projURL: 'https://giorgiilazi.github.io/burger-place/',
         repoURL: 'https://github.com/GiorgiiLazi/burger-place',
-        imgSrc: require("../assets/portfolio/burger.png")
+        imgSrc: require("../assets/portfolio/burger.png"),
+      
     },
     {   
         name: 'Epicurean travel',
         projURL: 'https://epicur.netlify.app/',
         repoURL: 'https://github.com/GiorgiiLazi/Epicur',
-        imgSrc: require("../assets/portfolio/Epicur.png")
+        imgSrc: require("../assets/portfolio/Epicur.png"),
+      
     },
     {   
         name: 'Tech-Pro',
         projURL: 'https://giorgiilazi.github.io/tech-pro/',
         repoURL: 'https://github.com/GiorgiiLazi/burger-place',
-        imgSrc: require("../assets/portfolio/tech.png")
+        imgSrc: require("../assets/portfolio/tech.png"),
+
     },
     {   
         name: 'L-News',
         projURL: 'https://giorgiilazi.github.io/news-site/',
         repoURL: 'https://github.com/GiorgiiLazi/news-site',
-        imgSrc: require("../assets/portfolio/news.png")
+        imgSrc: require("../assets/portfolio/news.png"),
+    
     },
     {   
         name: 'Geo-Planet',
         projURL: 'https://giorgiilazi.github.io/geo-planet/',
         repoURL: 'https://github.com/GiorgiiLazi/geo-planet',
-        imgSrc: require("../assets/portfolio/geo.png")
+        imgSrc: require("../assets/portfolio/geo.png"),
+   
     },
     {   
         name: 'Dictionary App',
         projURL: 'https://giorgiilazi.github.io/Dictionary-app/public/index.html',
         repoURL: 'https://github.com/GiorgiiLazi/Dictionary-app',
-        imgSrc: require("../assets/portfolio/dictionary.png")
+        imgSrc: require("../assets/portfolio/dictionary.png"),
+        
     },
     {   
         name: 'Kintrishi club',
         projURL: 'https://giorgiilazi.github.io/Kintrishi-webpage/',
         repoURL: 'https://github.com/GiorgiiLazi/Kintrishi-webpage',
-        imgSrc: require("../assets/portfolio/kintrishi.png")
+        imgSrc: require("../assets/portfolio/kintrishi.png"),
+       
     },
     {   
         name: 'BMI App',
         projURL: 'https://giorgiilazi.github.io/bmi-index/',
         repoURL: 'https://github.com/GiorgiiLazi/bmi-index',
-        imgSrc: require("../assets/portfolio/bmi.png")
-    },
+        imgSrc: require("../assets/portfolio/bmi.png"),
+    }
 ])
+
+
+
 </script>
 
 <style scoped>
@@ -110,17 +125,20 @@ const projectCards = reactive([
 .box li{
     border-radius: 20px;
     background-color: rgb(241, 154, 32);
+    flex: 1 1 300px;
 
 }
 .box li:hover{
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
     background-color: rgb(255, 150, 3);
 }
-.box img{
+.img{
     max-width: 100%;
-    height: auto;
-    border-radius: 20px 20px 0px 0px;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;;
 }
+
 .box h1{
     text-align: center;
 }
