@@ -23,8 +23,7 @@
 </template>
 
 <script setup>
-import {ref, reactive, onMounted, onUpdated} from 'vue'
-import {useObserver} from './composables/Observer'
+import {reactive} from 'vue'
 
 let cardsContent = reactive([
     {
@@ -94,21 +93,21 @@ let cardsContent = reactive([
         id: 6
     },
 ])
-let cards = ref([])
-const { exportedCards, observer } = useObserver()
+// let cards = ref([])
+// const { exportedCards, observer } = useObserver()
 
-onMounted(()=>{
-    cards.value = document.querySelectorAll('.card')
-    cards.value.forEach(card => {
-    observer.observe(card);
-  });
-})
-onUpdated(() => {
-  cards.value = exportedCards.value;
-  cards.value.forEach(card => {
-    observer.observe(card);  // Re-observe if cards are updated
-  });
-});
+// onMounted(()=>{
+//     cards.value = document.querySelectorAll('.card')
+//     cards.value.forEach(card => {
+//     observer.observe(card);
+//   });
+// })
+// onUpdated(() => {
+//   cards.value = exportedCards.value;
+//   cards.value.forEach(card => {
+//     observer.observe(card);  // Re-observe if cards are updated
+//   });
+// });
 
 
 
@@ -122,8 +121,7 @@ onUpdated(() => {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100%;
     padding: 20px;
     position: relative;
     display: grid;
@@ -151,10 +149,6 @@ onUpdated(() => {
 .card{
     text-align: center;
     position: relative;
-    opacity: 0;
-    transform: translateX(-100%);
-    filter: blur(5px);
-    display: inline-grid;
     border-radius: 30px;
     min-width: 350px;
     max-width: 500px;
@@ -164,27 +158,6 @@ onUpdated(() => {
     background-color: rgb(243, 168, 66);
     word-wrap: wrap;
     z-index:1;
-    transition: 0.5s all ease-out;
-}
-.card:nth-child(2){
-    transition-delay: 200ms;
-}
-.card:nth-child(3){
-    transition-delay: 400ms;
-}
-.card:nth-child(4){
-    transition-delay: 600ms;
-}
-.card:nth-child(5){
-    transition-delay: 800ms;
-}
-.card:nth-child(6){
-    transition-delay: 850ms;
-}
-.show{
-    opacity: 1;
-    transform: translateX(0);
-    filter: blur(0)
 }
 
 .card:hover{
@@ -249,18 +222,21 @@ ul{
 }
 /* dynamic styles */
 
-@media (max-width: 780px){
-    .services-container {
+@media (max-width: 780px) {
+  .services-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    padding: 16px;
     flex-direction: column;
-    }
-    .card {
-    flex: 1 1 300px; /* Grow, shrink, and start at 300px width */
-    max-width: 100%;
-    }
+    align-items: center; /* <-- центрирует карточки */
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .card {
+    min-width: auto;   /* убираем жёсткое ограничение */
+    width: 100%;       /* пусть занимает всю ширину контейнера */
+    max-width: 400px;  /* можно ограничить, чтобы не растягивалась слишком */
+    margin: 0 auto;    /* центрируем */
+  }
 }
 
 </style>

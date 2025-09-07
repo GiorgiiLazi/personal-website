@@ -1,9 +1,9 @@
 <template>
   <VueHeader />
-  <Greet />
   <Services />
   <Experience />
   <Portfolio />
+  <Greet />
   <VueFooter />
 </template>
 
