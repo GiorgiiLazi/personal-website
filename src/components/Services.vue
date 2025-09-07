@@ -117,7 +117,7 @@ let cardsContent = reactive([
 <style scoped>
 
 .services-container{
-    background-image: url('@/assets/webdev.png');
+    background-image: url('@/assets/webdev.webp');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -229,6 +229,7 @@ ul{
     align-items: center; /* <-- центрирует карточки */
     padding: 16px;
     gap: 16px;
+    grid-template-columns: 1;
   }
 
   .card {

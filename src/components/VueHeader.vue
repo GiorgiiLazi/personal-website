@@ -1,7 +1,7 @@
 <template>
   <section class="header-container">
     <Transition class="image" name="img" appear>
-      <img fetchpriority="'high'" src="../assets/photo1.png" alt="my-photo" />
+      <img fetchpriority="'high'" loading="eager" src="../assets/webdeveloper.webp" alt="webdeveloper's happy face" />
     </Transition>
     <div class="title">
       <Transition name="fade" appear>
@@ -34,7 +34,7 @@
   width: 50%;
 }
 .bkg {
-  background-image: url("@/assets/photo1.png");
+  background-image: url("@/assets/webdeveloper.webp");
 }
 .image {
     max-width: 100%;

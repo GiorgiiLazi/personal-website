@@ -22,16 +22,17 @@
     </aside>
     <article class="about">
         <h1>Experience</h1>
-        <p>Web developer with <strong>2 years of commercial experience</strong>, specializing in building dynamic and scalable web applications.</p>
-        <p>Strong background in <strong>algorithm development </strong>and practical implementation, ensuring efficient and optimized solutions.</p>
+        <p>Web developer with <strong>4 years of commercial experience</strong>, specializing in building dynamic and scalable landings</p>
+        <p>Strong background in <strong>Animations</strong> and practical implementation GSAP animation library, ensuring efficient and optimized solutions for scroll-driven animations</p>
+        <p><strong>SEO </strong> mastery leveraging use of <strong>meta-tags sitemaps and vite-ssg</strong>, making search engine put your landing page on pedestal, beyound your competitors reach, with blazing fast loading of page</p>
         <p>Leverage <strong>AI-powered tools</strong> like ChatGPT, Deepseek, Canva, and Tabnine to enhance development speed and innovation.</p>
-        <p>Successfully delivered <strong>dozens</strong> of applications, meeting and exceeding client expectations.</p>
+        <p>Successfully delivered <strong>dozens</strong> of businesses, meeting and exceeding client expectations.</p>
         <p>Freelance experience on <strong>Fiverr, Upwork, YouDo, and Profi</strong>, working with clients worldwide.</p>
         <div class="para">
             <h1>I offer you:</h1>
         <ol>
                 <li>✅ Expertise in <strong>Vue.js & JavaScript </strong>– Crafting complex and high-performance web applications.</li>
-                <!-- <li>✅ Custom <strong>WordPress</strong> Solutions – Tailored themes, plugins, and functionality to fit your unique needs.</li> -->
+                <li>✅ Custom <strong>WordPress</strong> Solutions – Tailored themes, plugins, and functionality to fit your unique needs.</li>
                 <li>✅ <strong>On-Time Delivery </strong>– Effective time management to ensure smooth project execution and timely results.</li>
         </ol>
     </div>

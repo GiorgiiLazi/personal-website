@@ -5,7 +5,7 @@
       <p>And figure out how to make you enterprize more profitable</p>
     </article>
     <div class="image-holder">
-      <img src="../assets/coffee.png" loading="lazy" alt="" />
+      <img src="../assets/coffee.webp" loading="lazy" alt="" />
     </div>
   </section>
 </template>
