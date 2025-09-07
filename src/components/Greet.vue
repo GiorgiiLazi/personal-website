@@ -83,9 +83,7 @@ article p {
   .greet-container {
     flex-direction: column;
   }
-  .image-holder {
-    display: none;
-  }
+ 
   .article {
     display: flex;
     align-items: center;
