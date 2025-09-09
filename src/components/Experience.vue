@@ -22,22 +22,24 @@
     </aside>
     <article class="about">
         <h1>Experience</h1>
-        <p>Web developer with <strong>4 years of commercial experience</strong>, specializing in building dynamic and scalable landings</p>
-        <p>Strong background in <strong>Animations</strong> and practical implementation GSAP animation library, ensuring efficient and optimized solutions for scroll-driven animations</p>
-        <p><strong>SEO </strong> mastery leveraging use of <strong>meta-tags sitemaps and vite-ssg</strong>, making search engine put your landing page on pedestal, beyound your competitors reach, with blazing fast loading of page</p>
-        <p>Leverage <strong>AI-powered tools</strong> like ChatGPT, Deepseek, Canva, and Tabnine to enhance development speed and innovation.</p>
-        <p>Successfully delivered <strong>dozens</strong> of businesses, meeting and exceeding client expectations.</p>
-        <p>Freelance experience on <strong>Fiverr, Upwork, YouDo, and Profi</strong>, working with clients worldwide.</p>
+        <p>Web developer with <strong>4+ years of proven commercial experience</strong>, specializing in designing and developing modern, dynamic, and scalable landing pages that convert.</p>
+        <p>Extensive background in <strong>animations</strong> with hands-on expertise in the GSAP library, delivering smooth, engaging, and performance-optimized scroll-driven effects.</p>
+        <p><strong>SEO expertise</strong> leveraging advanced use of <strong>meta-tags, sitemaps, and vite-ssg</strong>, ensuring your landing page ranks higher, loads instantly, and outshines competitors.</p>
+        <p>Proficient in utilizing <strong>AI-powered tools</strong> such as ChatGPT, Deepseek, Canva, and Tabnine to accelerate development, streamline workflow, and bring innovative solutions.</p>
+        <p>Successfully delivered <strong>dozens of projects</strong> for businesses across industries, consistently meeting and exceeding client expectations.</p>
+        <p>Solid freelance track record on <strong>Fiverr, Upwork, YouDo, and Profi</strong>, collaborating with international clients and delivering high-quality results worldwide.</p>
+        
         <div class="para">
             <h1>I offer you:</h1>
         <ol>
-                <li>✅ Expertise in <strong>Vue.js & JavaScript </strong>– Crafting complex and high-performance web applications.</li>
-                <li>✅ Custom <strong>WordPress</strong> Solutions – Tailored themes, plugins, and functionality to fit your unique needs.</li>
-                <li>✅ <strong>On-Time Delivery </strong>– Effective time management to ensure smooth project execution and timely results.</li>
+                <li>✅ Expertise in <strong>Vue.js & JavaScript</strong> – Building complex, interactive, and high-performance web applications tailored to your business goals.</li>
+                <li>✅ Custom <strong>WordPress</strong> Solutions – Creating unique themes, plugins, and features designed around your brand and functionality requirements.</li>
+                <li>✅ <strong>On-Time Delivery</strong> – Reliable project management and communication that guarantee smooth execution and timely completion.</li>
         </ol>
     </div>
-        <p>Let me bring your ideas to life with clean, efficient, and scalable code! 🚀</p>
-    </article>
+    
+        <p>Let me transform your vision into reality with clean, scalable, and future-proof code that drives results! 🚀</p>
+</article>
 </main>
     
   </section>

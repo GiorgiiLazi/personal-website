@@ -51,10 +51,11 @@ article > * {
 }
 article h1 {
   font-size: 5em;
+  text-shadow: 4px 4px 0px rgba(88, 88, 88, 0.6);
 }
 article p {
   font-size: 2em;
-  color: #838383bb;
+  color: white;
 }
 /* animations */
 
