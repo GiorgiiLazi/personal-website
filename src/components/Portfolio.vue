@@ -98,17 +98,19 @@ const projectCards = reactive([
     width: 90%;
 }
 .portfolio-container{
+    width: 100%;
     display: grid;
     flex-direction: column;
     justify-items: center;;
     align-items: center;
-    padding: 20px;
+
 }
 .box{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-columns: minmax(300px, auto);
     grid-template-rows: repeat(4, 1fr);
+    margin-right: 40px;
     gap: 20px;
     list-style: none;
     
