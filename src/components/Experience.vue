@@ -59,11 +59,15 @@ export default {
   padding: 20px;
 }
 
-.title {
-  text-align: center;
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 20px;
+.title{
+    color: rgb(243, 168, 66);
+    background:rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 4em;
+    grid-column: 1/-1;
+    grid-row: 1;
 }
 
 /* Main Layout */

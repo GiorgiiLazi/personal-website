@@ -133,9 +133,6 @@ let cardsContent = reactive([
     align-items: center;
     justify-items: center;
 }
-.services-container > * {
-    margin: 10px;
-}
 .title{
     color: rgb(243, 168, 66);
     background:rgba(0, 0, 0, 0.6);
@@ -145,6 +142,7 @@ let cardsContent = reactive([
     font-size: 4em;
     grid-column: 1/-1;
     grid-row: 1;
+    width: 90%;
 }
 .card{
     text-align: center;

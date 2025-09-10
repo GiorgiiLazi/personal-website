@@ -1,4 +1,6 @@
 <template>
+    
+
   <section class="portfolio-container">
     <h1 class="title">Portfolio</h1>
     <ul class="box">
@@ -82,13 +84,21 @@ const projectCards = reactive([
 </script>
 
 <style scoped>
-.title {
-  text-align: center;
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 20px;
+.title{
+    margin: 50px auto;
+    display: grid;
+    color: rgb(243, 168, 66);
+    background:rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 4em;
+    grid-column: 1/-1;
+    grid-row: 1;
+    width: 90%;
 }
 .portfolio-container{
+    display: grid;
     display: flex;
     flex-direction: column;
     justify-items: center;;
