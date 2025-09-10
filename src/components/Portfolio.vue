@@ -99,11 +99,9 @@ const projectCards = reactive([
 }
 .portfolio-container{
     display: grid;
-    display: flex;
     flex-direction: column;
     justify-items: center;;
     align-items: center;
-    max-width: 1200px;
     padding: 20px;
 }
 .box{
