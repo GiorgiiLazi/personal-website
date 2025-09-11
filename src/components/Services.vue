@@ -117,10 +117,6 @@ let cardsContent = reactive([
 <style scoped>
 
 .services-container{
-    background-image: url('@/assets/webdev.webp');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
     max-width: 100%;
     padding: 20px;
     position: relative;
@@ -145,7 +141,6 @@ let cardsContent = reactive([
     width: 90%;
 }
 .card{
-    text-align: center;
     position: relative;
     border-radius: 30px;
     min-width: 350px;
@@ -157,7 +152,9 @@ let cardsContent = reactive([
     word-wrap: wrap;
     z-index:1;
 }
-
+.card > *{
+    text-align: left;
+}
 .card:hover{
     animation: all 0.3s ease-in;
     box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.6);
@@ -166,13 +163,16 @@ let cardsContent = reactive([
 }
 .card h1{
     word-wrap: break-word;
+    padding-left: 15px;
 }
 .card h3{
-    width: 100%;
+    text-align: center;
     background: black;
     color: white;
 }
-
+.card p{
+    padding: 0 15px;
+}
 #card1{
     grid-column: 1;
     grid-row: 2
