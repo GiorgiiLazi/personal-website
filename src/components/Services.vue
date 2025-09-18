@@ -12,9 +12,9 @@
         <p>{{ card.desc }}</p>
         <h3>Task Examples:</h3>
         <ul>
-            <li>{{ card.examples[0] }}</li>
-            <li>{{ card.examples[1] }}</li>
-            <li>{{ card.examples[2] }}</li>
+            <li>1.{{ card.examples[0] }}</li>
+            <li>2.{{ card.examples[1] }}</li>
+            <li>3.{{ card.examples[2] }}</li>
         </ul>
 
     </div>
@@ -27,7 +27,7 @@ import {reactive} from 'vue'
 
 let cardsContent = reactive([
     {
-        titleH1: 'Web Development Vue.js',
+        titleH1: 'Web Development',
         desc: 'Building dynamic web apps with Vue.js',
         examples: [
             'Developing user interfaces', 
@@ -37,19 +37,20 @@ let cardsContent = reactive([
         icon:'architecture',
         id: 1
     },
+    // {
+    //     titleH1: 'WordPress Development',
+    //     desc: 'Customizing WordPress templates for you needs',
+    //     examples: [
+    //         'Refinement or creation of unique themes', 
+    //         'Adding interactive elements to the site', 
+    //         "Optimizing the user interface"
+    //     ],
+    //     icon:'draw',
+    //     id: 2
+    // },
+    
     {
-        titleH1: 'WordPress Development',
-        desc: 'Customizing WordPress templates for you needs',
-        examples: [
-            'Refinement or creation of unique themes', 
-            'Adding interactive elements to the site', 
-            "Optimizing the user interface"
-        ],
-        icon:'draw',
-        id: 2
-    },
-    {
-        titleH1: 'Landings',
+        titleH1: 'Landing',
         desc: 'Creating responsive websites for marketing, advertising purposes',
         examples: [
             'Developing landing pages for products, services, or events', 
@@ -71,7 +72,7 @@ let cardsContent = reactive([
         id: 4
     },
     {
-        titleH1: 'SPA building',
+        titleH1: 'SPA Building',
         desc: 'Developing SPAs to minimize page reloads and improve user experience',
         examples: [
             'Switching between pages wont reload your page', 
@@ -91,6 +92,28 @@ let cardsContent = reactive([
         ],
         icon:'responsive_layout',
         id: 6
+    },
+    {
+        titleH1: 'Deploying Website',
+        desc: 'Deploying project for production',
+        examples: [
+            'Buying domain', 
+            'Domain registration', 
+            "Picking right domain name for your business"
+        ],
+        icon:'domain_verification',
+        id: 7
+    },
+    {
+        titleH1: 'SEO',
+        desc: 'Help a website rank higher in search engines like Google ',
+        examples: [
+            'On-Page SEO: image optimization, keywords, metatags', 
+            'Technical SEO: Page speed optimization, Crawlability & indexing, HTTPS (SSL certificate)', 
+            "Structured data / Schema markup,  proper XML sitemap, robots.txt, and no duplicate content."
+        ],
+        icon:'design_services',
+        id: 7
     },
 ])
 // let cards = ref([])
