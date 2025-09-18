@@ -166,7 +166,7 @@ let cardsContent = reactive([
 .card{
     position: relative;
     border-radius: 30px;
-    min-width: 400px;
+    width: 400px;
     height: min-content;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
     cursor: pointer;
